@@ -1,11 +1,19 @@
 package Menus.Entities;
 
+import Controllers.CategoryController;
+
 import java.util.Scanner;
 
 public class CategoryMenu {
 
-    public static void showMenu() {
+    private final CategoryController controller;
+    private final Scanner input = new Scanner(System.in);
 
+    public CategoryMenu(CategoryController controller) {
+        this.controller = controller;
+    }
+
+    public void showMenu() {
         System.out.println();
         System.out.println("╔════════════════════════════════════════════════╗");
         System.out.println("║              CATEGORY MANAGEMENT               ║");
@@ -18,25 +26,32 @@ public class CategoryMenu {
         System.out.println("╚════════════════════════════════════════════════╝");
         System.out.print("Enter your choice: ");
 
-        CategoryMenu.resolveCategoryOptions();
+        resolveCategoryOptions();
     }
 
-    public static void resolveCategoryOptions() {
-        Scanner input = new Scanner(System.in);
+    public void resolveCategoryOptions() {
         int option = input.nextInt();
+        input.nextLine();
         navigate(option);
     }
 
-    public static void navigate(int option) {
-
+    public void navigate(int option) {
         switch (option) {
             case 1:
+                controller.postCategory();
+                showMenu();
                 break;
             case 2:
+                controller.getCategory();
+                showMenu();
                 break;
             case 3:
+                controller.updateCategory();
+                showMenu();
                 break;
             case 4:
+                controller.deleteCategory();
+                showMenu();
                 break;
             case 0:
                 break;

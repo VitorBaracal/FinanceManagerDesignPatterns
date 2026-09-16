@@ -6,6 +6,12 @@ import java.util.Scanner;
 
 public class BaseMenu {
 
+    private final CategoryMenu categoryMenu;
+
+    public BaseMenu(CategoryMenu categoryMenu) {
+        this.categoryMenu = categoryMenu;
+    }
+
     public void showMenu(){
 
         System.out.println("╔════════════════════════════════════════════════╗");
@@ -44,7 +50,7 @@ public class BaseMenu {
 
         switch (option) {
             case 1:
-                CategoryMenu.showMenu();
+                categoryMenu.showMenu();
                 break;
             default:
                 break;
