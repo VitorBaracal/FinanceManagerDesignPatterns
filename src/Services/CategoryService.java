@@ -17,15 +17,45 @@ public class CategoryService {
         return categoryDao.getAllCategories();
     }
 
-    public void addCategory(Category category) {
+    public String addCategory(Category category) {
 
+        if (category.getName() == null) {
+            return "ERROR: Category name cannot be empty.";
+        }
+
+        String name = category.getName().trim();
+        category.setName(name);
+        categoryDao.save(category);
+        return "SUCCESS: Category '" + name + "' created successfully.";
     }
 
-    public void updateCategory(Category category) {
+    public String updateCategory(Category category) {
 
+        if (category.getName() == null ) {
+            return "ERROR: Category name cannot be empty.";
+        }
+
+        String name = category.getName().trim();
+        List<Category> categories = getAllCategories();
+        boolean exists = categories.stream().anyMatch(existing -> existing.getId() == category.getId());
+
+        if (!exists) {
+            return "ERROR: Category not found.";
+        }
+
+        categoryDao.update(category.getId(), name);
+        return "SUCCESS: Category updated successfully.";
     }
 
-    public void deleteCategory(int id) {
+    public String deleteCategory(int id) {
 
+        boolean exists = getAllCategories().stream().anyMatch(existing -> existing.getId() == id);
+
+        if (!exists) {
+            return "ERROR: Category not found.";
+        }
+
+        categoryDao.delete(id);
+        return "SUCCESS: Category deleted successfully.";
     }
 }
