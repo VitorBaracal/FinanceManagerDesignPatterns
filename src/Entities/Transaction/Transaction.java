@@ -63,4 +63,13 @@ public abstract class Transaction {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + id +
+                " | Description: " + description +
+                " | Amount: " + amount +
+                " | Date: " + date +
+                " | Category: " + category;
+    }
 }

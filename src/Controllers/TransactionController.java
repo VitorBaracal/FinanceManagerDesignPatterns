@@ -4,6 +4,7 @@ import Entities.Category;
 import Entities.Transaction.Expense;
 import Entities.Transaction.Income;
 import Entities.Transaction.Transaction;
+import Factories.TransactionFactory;
 import Services.TransactionService;
 
 import java.util.List;
@@ -97,26 +98,14 @@ public class TransactionController {
             return null;
         }
 
-        if (type == 1) {
-
-            return new Income(
-                    id,
-                    description,
-                    amount,
-                    date,
-                    category
-            );
-
-        } else {
-
-            return new Expense(
-                    id,
-                    description,
-                    amount,
-                    date,
-                    category
-            );
-        }
+        return TransactionFactory.create(
+                type,
+                id,
+                description,
+                amount,
+                date,
+                category
+        );
     }
 
     private int getTransactionType() {
