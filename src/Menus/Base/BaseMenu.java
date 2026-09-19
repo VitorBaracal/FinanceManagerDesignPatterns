@@ -1,18 +1,21 @@
 package Menus.Base;
 
 import Menus.Entities.CategoryMenu;
+import Menus.Entities.TransactionMenu;
 
 import java.util.Scanner;
 
 public class BaseMenu {
 
     private final CategoryMenu categoryMenu;
+    private final TransactionMenu transactionMenu;
 
-    public BaseMenu(CategoryMenu categoryMenu) {
+    public BaseMenu(CategoryMenu categoryMenu, TransactionMenu transactionMenu) {
         this.categoryMenu = categoryMenu;
+        this.transactionMenu = transactionMenu;
     }
 
-    public void showMenu(){
+    public void showMenu() {
 
         System.out.println("╔════════════════════════════════════════════════╗");
         System.out.println("║                                                ║");
@@ -29,21 +32,27 @@ public class BaseMenu {
     public void resolveMenuOptions() {
 
         Scanner input = new Scanner(System.in);
+        int option;
 
-        System.out.println();
-        System.out.println("╔════════════════════════════════════════════════╗");
-        System.out.println("║              SELECT AN OPTION                  ║");
-        System.out.println("╠════════════════════════════════════════════════╣");
-        System.out.println("║  1. Manage Categories                          ║");
-        System.out.println("║  2. Manage Accounts                            ║");
-        System.out.println("║  3. Manage Transactions                        ║");
-        System.out.println("║  4. Manage Goals                               ║");
-        System.out.println("║  0. Exit                                       ║");
-        System.out.println("╚════════════════════════════════════════════════╝");
-        System.out.print("Enter your choice: ");
+        do {
 
-        int option = input.nextInt();
-        navigate(option);
+            System.out.println();
+            System.out.println("╔════════════════════════════════════════════════╗");
+            System.out.println("║              SELECT AN OPTION                  ║");
+            System.out.println("╠════════════════════════════════════════════════╣");
+            System.out.println("║  1. Manage Categories                          ║");
+            System.out.println("║  2. Manage Accounts                            ║");
+            System.out.println("║  3. Manage Transactions                        ║");
+            System.out.println("║  4. Manage Goals                               ║");
+            System.out.println("║  0. Exit                                       ║");
+            System.out.println("╚════════════════════════════════════════════════╝");
+            System.out.print("Enter your choice: ");
+
+            option = input.nextInt();
+
+            navigate(option);
+
+        } while (option != 0);
     }
 
     public void navigate(int option) {
@@ -52,6 +61,8 @@ public class BaseMenu {
             case 1:
                 categoryMenu.showMenu();
                 break;
+            case 3:
+                transactionMenu.showMenu();
             default:
                 break;
 
