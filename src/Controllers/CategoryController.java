@@ -59,4 +59,37 @@ public class CategoryController {
         String result = service.deleteCategory(id);
         System.out.println(result);
     }
+
+    public Category selectCategory() {
+
+        List<Category> categories = service.getAllCategories();
+
+        if (categories.isEmpty()) {
+            System.out.println("ERROR: No categories found.");
+            return null;
+        }
+
+        System.out.println();
+        System.out.println("Available categories:");
+
+        for (Category category : categories) {
+            System.out.println(
+                    "ID: " + category.getId()
+                            + " | Name: " + category.getName()
+            );
+        }
+
+        System.out.print("Enter category ID: ");
+        int id = input.nextInt();
+        input.nextLine();
+
+        for (Category category : categories) {
+            if (category.getId() == id) {
+                return category;
+            }
+        }
+
+        System.out.println("ERROR: Category not found.");
+        return null;
+    }
 }
