@@ -32,12 +32,15 @@ import java.util.List;
                     return "ERROR: Agency Number already exists";
                 }
             }
+
             int agency = account.getAgency();
+            double balance = account.getBalance();
             String bankName = account.getBankName().trim();
             account.setBankName(bankName);
 
             accountDao.save(account);
-            return "SUCCESS: Account with Bank Name '" + bankName + "' with Agency Number '" + agency +"' created successfully.";
+            return "SUCCESS: Account with Bank Name '" + bankName + "' with Agency Number '" + agency +
+                    "' and Balance '" + balance + "' created successfully.";
         }
 
         public String updateAccount(Account account){

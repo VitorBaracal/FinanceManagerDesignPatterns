@@ -1,10 +1,14 @@
+import Controllers.AccountController;
 import Controllers.CategoryController;
 import Controllers.TransactionController;
+import Dao.AccountDao;
 import Dao.CategoryDao;
 import Dao.TransactionDao;
 import Menus.Base.BaseMenu;
+import Menus.Entities.AccountMenu;
 import Menus.Entities.CategoryMenu;
 import Menus.Entities.TransactionMenu;
+import Services.AccountService;
 import Services.CategoryService;
 import Services.TransactionService;
 
@@ -19,8 +23,12 @@ public class Main {
         TransactionService transactionService = new TransactionService(transactionDao);
         TransactionController transactionController = new TransactionController(transactionService, categoryController);
         TransactionMenu transactionMenu= new TransactionMenu(transactionController);
+        AccountDao accountDao = new AccountDao();
+        AccountService accountService = new AccountService(accountDao);
+        AccountController accountController = new AccountController(accountService);
+        AccountMenu accountMenu = new AccountMenu(accountController);
 
-        BaseMenu baseMenu = new BaseMenu(categoryMenu, transactionMenu);
+        BaseMenu baseMenu = new BaseMenu(categoryMenu, transactionMenu, accountMenu);
         baseMenu.showMenu();
     }
 }
