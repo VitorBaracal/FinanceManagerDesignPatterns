@@ -1,6 +1,8 @@
 package Services;
 
 import Dao.TransactionDao;
+import Entities.Transaction.Expense;
+import Entities.Transaction.Income;
 import Entities.Transaction.Transaction;
 
 import java.util.List;
@@ -8,10 +10,9 @@ import java.util.List;
 public class TransactionService {
 
     private final TransactionDao transactionDao;
+    private final AccountService accountService;
 
-    public TransactionService(TransactionDao transactionDao) {
-        this.transactionDao = transactionDao;
-    }
+    public TransactionService(TransactionDao transactionDao, AccountService accountService) {this.transactionDao = transactionDao; this.accountService = accountService;}
 
     public List<Transaction> getAllTransactions() {
         return transactionDao.getAllTransactions();
@@ -29,6 +30,12 @@ public class TransactionService {
         transaction.setDescription(description);
 
         transactionDao.save(transaction);
+
+        if (transaction instanceof Income) {
+            accountService.increaseBalance(transaction.getAccountId(), transaction.getAmount());
+        } else if (transaction instanceof Expense) {
+            accountService.decreaseBalance(transaction.getAccountId(), transaction.getAmount());
+        }
 
         return "SUCCESS: Transaction '" + description + "' created successfully.";
     }

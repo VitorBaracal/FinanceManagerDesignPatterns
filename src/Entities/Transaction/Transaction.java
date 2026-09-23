@@ -9,24 +9,29 @@ public abstract class Transaction {
     private double amount;
     private String date;
     private Category category;
+    private int accountId;
 
     public Transaction(
             int id,
             String description,
             double amount,
             String date,
-            Category category
+            Category category,
+            int accountId
     ) {
         this.id = id;
         this.description = description;
         this.amount = amount;
         this.date = date;
         this.category = category;
+        this.accountId = accountId;
     }
 
     public int getId() {
         return id;
     }
+
+    public int getAccountId() {return accountId;}
 
     public String getDescription() {
         return description;

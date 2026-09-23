@@ -1,5 +1,6 @@
 package Menus.Base;
 
+import Menus.Entities.AccountMenu;
 import Menus.Entities.CategoryMenu;
 import Menus.Entities.TransactionMenu;
 
@@ -9,10 +10,12 @@ public class BaseMenu {
 
     private final CategoryMenu categoryMenu;
     private final TransactionMenu transactionMenu;
+    private final AccountMenu accountMenu;
 
-    public BaseMenu(CategoryMenu categoryMenu, TransactionMenu transactionMenu) {
+    public BaseMenu(CategoryMenu categoryMenu, TransactionMenu transactionMenu, AccountMenu accountMenu) {
         this.categoryMenu = categoryMenu;
         this.transactionMenu = transactionMenu;
+        this.accountMenu = accountMenu;
     }
 
     public void showMenu() {
@@ -60,6 +63,9 @@ public class BaseMenu {
         switch (option) {
             case 1:
                 categoryMenu.showMenu();
+                break;
+            case 2:
+                accountMenu.showMenu();
                 break;
             case 3:
                 transactionMenu.showMenu();
