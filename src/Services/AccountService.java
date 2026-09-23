@@ -9,6 +9,26 @@ import java.util.List;
 
         private final BaseAccountDao accountDao;
 
+        public void increaseBalance(int accountId, double amount) {
+            List<Account> accounts = getAllAccounts();
+            for (Account account : accounts) {
+                if (account.getId() == accountId) {
+                    account.setBalance(account.getBalance() + amount);
+                    return;
+                }
+            }
+        }
+
+        public void decreaseBalance(int accountId, double amount) {
+            List<Account> accounts = getAllAccounts();
+            for (Account account : accounts) {
+                if (account.getId() == accountId) {
+                    account.setBalance(account.getBalance() - amount);
+                    return;
+                }
+            }
+        }
+
         public AccountService(BaseAccountDao accountDao) {
             this.accountDao = accountDao;
         }

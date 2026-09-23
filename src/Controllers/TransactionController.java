@@ -15,13 +15,16 @@ public class TransactionController {
     private final TransactionService service;
     private final CategoryController categoryController;
     private final Scanner input = new Scanner(System.in);
+    private final AccountController accountController;
 
     public TransactionController(
             TransactionService service,
-            CategoryController categoryController
+            CategoryController categoryController,
+            AccountController accountController
     ) {
         this.service = service;
         this.categoryController = categoryController;
+        this.accountController = accountController;
     }
 
     public void getTransaction() {
@@ -94,6 +97,10 @@ public class TransactionController {
 
         Category category = categoryController.selectCategory();
 
+        System.out.print("Enter Account ID: ");
+        int accountId = input.nextInt();
+        input.nextLine();
+
         if (category == null) {
             return null;
         }
@@ -104,7 +111,8 @@ public class TransactionController {
                 description,
                 amount,
                 date,
-                category
+                category,
+                accountId
         );
     }
 

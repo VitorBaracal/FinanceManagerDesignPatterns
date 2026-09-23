@@ -13,7 +13,8 @@ public class TransactionFactory {
             String description,
             double amount,
             String date,
-            Category category
+            Category category,
+            int accountId
     ) {
 
         if (type == 1) {
@@ -22,7 +23,8 @@ public class TransactionFactory {
                     description,
                     amount,
                     date,
-                    category
+                    category,
+                    accountId
             );
         }
 
@@ -32,7 +34,8 @@ public class TransactionFactory {
                     description,
                     amount,
                     date,
-                    category
+                    category,
+                    accountId
             );
         }
 
