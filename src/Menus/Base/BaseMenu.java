@@ -2,6 +2,7 @@ package Menus.Base;
 
 import Menus.Entities.AccountMenu;
 import Menus.Entities.CategoryMenu;
+import Menus.Entities.PaymentMenu;
 import Menus.Entities.TransactionMenu;
 
 import java.util.Scanner;
@@ -11,11 +12,13 @@ public class BaseMenu {
     private final CategoryMenu categoryMenu;
     private final TransactionMenu transactionMenu;
     private final AccountMenu accountMenu;
+    private final PaymentMenu paymentMenu;
 
-    public BaseMenu(CategoryMenu categoryMenu, TransactionMenu transactionMenu, AccountMenu accountMenu) {
+    public BaseMenu(CategoryMenu categoryMenu, TransactionMenu transactionMenu, AccountMenu accountMenu, PaymentMenu paymentMenu) {
         this.categoryMenu = categoryMenu;
         this.transactionMenu = transactionMenu;
         this.accountMenu = accountMenu;
+        this.paymentMenu = paymentMenu;
     }
 
     public void showMenu() {
@@ -47,6 +50,7 @@ public class BaseMenu {
             System.out.println("║  2. Manage Accounts                            ║");
             System.out.println("║  3. Manage Transactions                        ║");
             System.out.println("║  4. Manage Goals                               ║");
+            System.out.println("║  5. Payment                                    ║");
             System.out.println("║  0. Exit                                       ║");
             System.out.println("╚════════════════════════════════════════════════╝");
             System.out.print("Enter your choice: ");
@@ -69,6 +73,10 @@ public class BaseMenu {
                 break;
             case 3:
                 transactionMenu.showMenu();
+                break;
+            case 5:
+                paymentMenu.showMenu();
+                break;
             default:
                 break;
 
