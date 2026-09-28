@@ -55,10 +55,23 @@ public class BaseMenu {
             System.out.print("Enter your choice: ");
 
             option = input.nextInt();
+            input.nextLine();
+
+            if (option == 0 && !confirmExit(input)) {
+                continue;
+            }
 
             navigate(option);
 
         } while (option != 0);
+    }
+
+    private boolean confirmExit(Scanner input) {
+        
+        System.out.println("Do you want to exit? The data will be lost.");
+        System.out.print("Enter Y to exit or N to stay: ");
+        String answer = input.nextLine();
+        return answer.equalsIgnoreCase("Y");
     }
 
     public void navigate(int option) {
