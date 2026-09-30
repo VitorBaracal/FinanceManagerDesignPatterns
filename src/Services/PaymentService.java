@@ -6,6 +6,7 @@ import Factories.PaymentFactory;
 public class PaymentService {
 
     public void pay(int type) {
+
         Payment payment = PaymentFactory.create(type);
 
         if (payment == null) {
@@ -14,5 +15,6 @@ public class PaymentService {
         }
 
         payment.pay();
+
     }
 }

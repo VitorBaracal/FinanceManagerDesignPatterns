@@ -11,6 +11,8 @@ public class PaymentController {
     }
 
     public void pay(int type) {
+
         service.pay(type);
+
     }
 }

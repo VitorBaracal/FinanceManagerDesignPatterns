@@ -18,6 +18,7 @@ import Services.TransactionService;
 public class Main {
 
     public static void main(String[] args) {
+
         AccountDao accountDao = new AccountDao();
         AccountService accountService = new AccountService(accountDao);
         AccountController accountController = new AccountController(accountService);
@@ -36,5 +37,6 @@ public class Main {
 
         BaseMenu baseMenu = new BaseMenu(categoryMenu, transactionMenu, accountMenu, paymentMenu);
         baseMenu.showMenu();
+
     }
 }

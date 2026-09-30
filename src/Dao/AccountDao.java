@@ -13,34 +13,47 @@ public class AccountDao implements BaseAccountDao {
 
     @Override
     public void save(Account account) {
+
         account.setId(id++);
         accounts.add(account);
+
     }
 
     @Override
-    public List<Account> getAllAccounts(){return accounts;}
+    public List<Account> getAllAccounts() {
+
+        return accounts;
+
+    }
 
     @Override
     public void update(int id, int newAgency) {
-        for(Account account : accounts) {
+
+        for (Account account : accounts) {
             if (account.getId() == id) {
                 account.setAgency(newAgency);
                 return;
             }
         }
+
     }
 
     @Override
-    public void update(int id, String newBankName){
-        for (Account account : accounts){
-            if (account.getId() == id){
+    public void update(int id, String newBankName) {
+
+        for (Account account : accounts) {
+            if (account.getId() == id) {
                 account.setBankName(newBankName);
                 return;
             }
         }
+
     }
 
     @Override
-    public void delete(int id) {accounts.removeIf(account -> account.getId() == id);
+    public void delete(int id) {
+
+        accounts.removeIf(account -> account.getId() == id);
+
     }
 }

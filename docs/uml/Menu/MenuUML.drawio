@@ -1,0 +1,130 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="MenuUML">
+    <mxGraphModel dx="2920" dy="1187" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="categoryController" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CategoryController" vertex="1">
+          <mxGeometry height="106" width="340" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="categoryController-line" parent="categoryController" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="categoryController-methods" parent="categoryController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ postCategory(): void&lt;div&gt;+ getCategory(): void&lt;/div&gt;&lt;div&gt;+ updateCategory(): void&lt;/div&gt;&lt;div&gt;+ deleteCategory(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="340" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="accountController" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AccountController" vertex="1">
+          <mxGeometry height="106" width="340" x="420" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="accountController-line" parent="accountController" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="accountController-methods" parent="accountController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ postAccount(): void&lt;div&gt;+ getAccount(): void&lt;/div&gt;&lt;div&gt;+ updateAccount(): void&lt;/div&gt;&lt;div&gt;+ deleteAccount(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="340" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionController" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="TransactionController" vertex="1">
+          <mxGeometry height="106" width="360" x="800" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionController-line" parent="transactionController" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="360" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionController-methods" parent="transactionController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ postTransaction(): void&lt;div&gt;+ getTransaction(): void&lt;/div&gt;&lt;div&gt;+ updateTransaction(): void&lt;/div&gt;&lt;div&gt;+ deleteTransaction(): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="360" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentController" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PaymentController" vertex="1">
+          <mxGeometry height="60" width="340" x="1200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentController-line" parent="paymentController" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentController-methods" parent="paymentController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ pay(int type): void" vertex="1">
+          <mxGeometry height="26" width="340" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="categoryMenu" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CategoryMenu" vertex="1">
+          <mxGeometry height="150" width="340" x="40" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="categoryMenu-attrs" parent="categoryMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- controller: CategoryController&lt;div&gt;- input: Scanner&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="categoryMenu-line" parent="categoryMenu" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="categoryMenu-methods" parent="categoryMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ CategoryMenu(CategoryController controller)&lt;div&gt;+ showMenu(): void&lt;/div&gt;&lt;div&gt;+ resolveCategoryOptions(): void&lt;/div&gt;&lt;div&gt;+ navigate(int option): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="340" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="accountMenu" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AccountMenu" vertex="1">
+          <mxGeometry height="150" width="340" x="420" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="accountMenu-attrs" parent="accountMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- controller: AccountController&lt;div&gt;- input: Scanner&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="accountMenu-line" parent="accountMenu" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="accountMenu-methods" parent="accountMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ AccountMenu(AccountController controller)&lt;div&gt;+ showMenu(): void&lt;/div&gt;&lt;div&gt;+ resolveAccountOptions(): void&lt;/div&gt;&lt;div&gt;+ navigate(int option): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="340" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionMenu" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="TransactionMenu" vertex="1">
+          <mxGeometry height="150" width="360" x="800" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionMenu-attrs" parent="transactionMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- input: Scanner&lt;div&gt;- controller: TransactionController&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="360" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionMenu-line" parent="transactionMenu" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="360" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionMenu-methods" parent="transactionMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ TransactionMenu(TransactionController controller)&lt;div&gt;+ showMenu(): void&lt;/div&gt;&lt;div&gt;+ resolveTransactionOptions(): void&lt;/div&gt;&lt;div&gt;+ navigate(int option): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="360" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentMenu" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PaymentMenu" vertex="1">
+          <mxGeometry height="150" width="340" x="1200" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentMenu-attrs" parent="paymentMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- controller: PaymentController&lt;div&gt;- input: Scanner&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentMenu-line" parent="paymentMenu" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentMenu-methods" parent="paymentMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ PaymentMenu(PaymentController controller)&lt;div&gt;+ showMenu(): void&lt;/div&gt;&lt;div&gt;+ resolvePaymentOptions(): void&lt;/div&gt;&lt;div&gt;+ navigate(int option): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="340" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="baseMenu" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="BaseMenu" vertex="1">
+          <mxGeometry height="214" width="760" x="400" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="baseMenu-attrs" parent="baseMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- categoryMenu: CategoryMenu&lt;div&gt;- transactionMenu: TransactionMenu&lt;/div&gt;&lt;div&gt;- accountMenu: AccountMenu&lt;/div&gt;&lt;div&gt;- paymentMenu: PaymentMenu&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="760" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="baseMenu-line" parent="baseMenu" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="760" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="baseMenu-methods" parent="baseMenu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ BaseMenu(CategoryMenu categoryMenu, TransactionMenu transactionMenu, AccountMenu accountMenu, PaymentMenu paymentMenu)&lt;div&gt;+ showMenu(): void&lt;/div&gt;&lt;div&gt;+ resolveMenuOptions(): void&lt;/div&gt;&lt;div&gt;+ navigate(int option): void&lt;/div&gt;&lt;div&gt;- confirmExit(Scanner input): boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="760" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-categoryMenu-controller" edge="1" parent="1" source="categoryMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" target="categoryController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-accountMenu-controller" edge="1" parent="1" source="accountMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" target="accountController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-transactionMenu-controller" edge="1" parent="1" source="transactionMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" target="transactionController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-paymentMenu-controller" edge="1" parent="1" source="paymentMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" target="paymentController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-base-category" edge="1" parent="1" source="baseMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;exitX=0.12;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="categoryMenu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-base-account" edge="1" parent="1" source="baseMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;exitX=0.38;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="accountMenu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-base-transaction" edge="1" parent="1" source="baseMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;exitX=0.645;exitY=0.009;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" target="transactionMenu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-base-payment" edge="1" parent="1" source="baseMenu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;exitX=0.92;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="paymentMenu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

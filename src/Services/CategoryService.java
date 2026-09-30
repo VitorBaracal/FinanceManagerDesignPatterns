@@ -14,7 +14,9 @@ public class CategoryService {
     }
 
     public List<Category> getAllCategories() {
+
         return categoryDao.getAllCategories();
+
     }
 
     public String addCategory(Category category) {
@@ -27,6 +29,7 @@ public class CategoryService {
         category.setName(name);
         categoryDao.save(category);
         return "SUCCESS: Category '" + name + "' created successfully.";
+
     }
 
     public String updateCategory(Category category) {
@@ -45,6 +48,7 @@ public class CategoryService {
 
         categoryDao.update(category.getId(), name);
         return "SUCCESS: Category updated successfully.";
+
     }
 
     public String deleteCategory(int id) {
@@ -57,5 +61,6 @@ public class CategoryService {
 
         categoryDao.delete(id);
         return "SUCCESS: Category deleted successfully.";
+
     }
 }

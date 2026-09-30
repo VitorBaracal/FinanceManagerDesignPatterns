@@ -7,6 +7,7 @@ import Entities.Payment.Pix;
 public class PaymentFactory {
 
     public static Payment create(int type) {
+
         if (type == 1) {
             return new Card();
         }
@@ -16,5 +17,6 @@ public class PaymentFactory {
         }
 
         return null;
+
     }
 }

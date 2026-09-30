@@ -14,6 +14,7 @@ public class CategoryMenu {
     }
 
     public void showMenu() {
+
         System.out.println();
         System.out.println("╔════════════════════════════════════════════════╗");
         System.out.println("║              CATEGORY MANAGEMENT               ║");
@@ -27,15 +28,19 @@ public class CategoryMenu {
         System.out.print("Enter your choice: ");
 
         resolveCategoryOptions();
+
     }
 
     public void resolveCategoryOptions() {
+
         int option = input.nextInt();
         input.nextLine();
         navigate(option);
+
     }
 
     public void navigate(int option) {
+
         switch (option) {
             case 1:
                 controller.postCategory();
@@ -56,5 +61,6 @@ public class CategoryMenu {
             case 0:
                 break;
         }
+
     }
 }

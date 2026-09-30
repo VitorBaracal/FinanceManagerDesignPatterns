@@ -13,13 +13,17 @@ public class TransactionDao implements BaseTransactionDao {
 
     @Override
     public void save(Transaction transaction) {
+
         transaction.setId(id++);
         transactions.add(transaction);
+
     }
 
     @Override
     public List<Transaction> getAllTransactions() {
+
         return transactions;
+
     }
 
     @Override
@@ -37,10 +41,13 @@ public class TransactionDao implements BaseTransactionDao {
                 return;
             }
         }
+
     }
 
     @Override
     public void delete(int id) {
+
         transactions.removeIf(transaction -> transaction.getId() == id);
+
     }
 }

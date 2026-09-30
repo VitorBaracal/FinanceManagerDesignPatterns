@@ -14,19 +14,33 @@ public class Account {
         this.balance = balance;
     }
 
-    public int getId() {return id;}
+    public int getId() {
+        return id;
+    }
 
-    public void setId(int id) {this.id = id;}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getBankName(){return bankName;}
+    public String getBankName() {
+        return bankName;
+    }
 
-    public void setBankName(String bankName){this.bankName = bankName;}
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
 
-    public int getAgency() {return agency;}
+    public int getAgency() {
+        return agency;
+    }
 
-    public void setAgency(int agency){this.agency = agency; }
+    public void setAgency(int agency) {
+        this.agency = agency;
+    }
 
-    public double getBalance() {return balance;}
+    public double getBalance() {
+        return balance;
+    }
 
     public void setBalance(double balance) {
         this.balance = balance;
@@ -34,10 +48,12 @@ public class Account {
 
     @Override
     public String toString() {
+
         return "ID: " + id +
                 " | Bank: " + bankName +
                 " | Agency: " + agency +
                 " | Balance: " + balance;
+
     }
 
 }

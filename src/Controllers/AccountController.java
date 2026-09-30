@@ -16,10 +16,11 @@ public class AccountController {
         this.service = service;
     }
 
-    public void getAccount(){
+    public void getAccount() {
+
         List<Account> accounts = service.getAllAccounts();
 
-        if (accounts.isEmpty()){
+        if (accounts.isEmpty()) {
             System.out.println("ERROR: No accounts found.");
             return;
         }
@@ -27,9 +28,11 @@ public class AccountController {
         for (Account account : accounts) {
             System.out.println(account);
         }
+
     }
 
-    public void postAccount(){
+    public void postAccount() {
+
         System.out.print("Enter Bank name: ");
         String bankname = input.nextLine();
 
@@ -42,25 +45,26 @@ public class AccountController {
         Account account = new Account(0, bankname, agency, balance);
         String result = service.addAccount(account);
         System.out.println(result);
+
     }
 
-    private double getBalance(){
-         while (true) {
-             System.out.print("Enter your currently Balance: ");
-             String text = input.nextLine();
+    private double getBalance() {
+
+        while (true) {
+            System.out.print("Enter your currently Balance: ");
+            String text = input.nextLine();
 
             try {
                 double balance = Double.parseDouble(text);
                 return balance;
-            }
-            catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 System.out.println("ERROR: Please insert a valid Balance");
             }
+        }
 
-         }
     }
 
-    public void updateAccount(){
+    public void updateAccount() {
 
         System.out.print("Enter Account ID: ");
         int id = input.nextInt();
@@ -81,7 +85,7 @@ public class AccountController {
 
     }
 
-    public void deleteAccount(){
+    public void deleteAccount() {
 
         System.out.print("Enter Account ID: ");
         int id = input.nextInt();
@@ -89,5 +93,6 @@ public class AccountController {
 
         String result = service.deleteAccount(id);
         System.out.println(result);
+
     }
 }

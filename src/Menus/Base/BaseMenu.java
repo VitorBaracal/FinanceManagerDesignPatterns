@@ -33,6 +33,7 @@ public class BaseMenu {
         System.out.println("╚════════════════════════════════════════════════╝");
 
         resolveMenuOptions();
+
     }
 
     public void resolveMenuOptions() {
@@ -64,14 +65,16 @@ public class BaseMenu {
             navigate(option);
 
         } while (option != 0);
+
     }
 
     private boolean confirmExit(Scanner input) {
-        
+
         System.out.println("Do you want to exit? The data will be lost.");
         System.out.print("Enter Y to exit or N to stay: ");
         String answer = input.nextLine();
         return answer.equalsIgnoreCase("Y");
+
     }
 
     public void navigate(int option) {
@@ -93,5 +96,6 @@ public class BaseMenu {
                 break;
 
         }
+
     }
 }

@@ -14,6 +14,7 @@ public class AccountMenu {
     }
 
     public void showMenu() {
+
         System.out.println();
         System.out.println("╔════════════════════════════════════════════════╗");
         System.out.println("║              ACCOUNT MANAGEMENT                ║");
@@ -27,15 +28,19 @@ public class AccountMenu {
         System.out.print("Enter your choice: ");
 
         resolveAccountOptions();
+
     }
 
     public void resolveAccountOptions() {
+
         int option = input.nextInt();
         input.nextLine();
         navigate(option);
+
     }
 
     public void navigate(int option) {
+
         switch (option) {
             case 1:
                 controller.postAccount();
@@ -56,5 +61,6 @@ public class AccountMenu {
             case 0:
                 break;
         }
+
     }
 }
