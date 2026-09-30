@@ -12,10 +12,15 @@ public class TransactionService {
     private final TransactionDao transactionDao;
     private final AccountService accountService;
 
-    public TransactionService(TransactionDao transactionDao, AccountService accountService) {this.transactionDao = transactionDao; this.accountService = accountService;}
+    public TransactionService(TransactionDao transactionDao, AccountService accountService) {
+        this.transactionDao = transactionDao;
+        this.accountService = accountService;
+    }
 
     public List<Transaction> getAllTransactions() {
+
         return transactionDao.getAllTransactions();
+
     }
 
     public String addTransaction(Transaction transaction) {
@@ -38,6 +43,7 @@ public class TransactionService {
         }
 
         return "SUCCESS: Transaction '" + description + "' created successfully.";
+
     }
 
     public String updateTransaction(Transaction transaction) {
@@ -64,6 +70,7 @@ public class TransactionService {
         transactionDao.update(transaction);
 
         return "SUCCESS: Transaction updated successfully.";
+
     }
 
     public String deleteTransaction(int id) {
@@ -79,5 +86,6 @@ public class TransactionService {
         transactionDao.delete(id);
 
         return "SUCCESS: Transaction deleted successfully.";
+
     }
 }

@@ -17,11 +17,7 @@ public class TransactionController {
     private final Scanner input = new Scanner(System.in);
     private final AccountController accountController;
 
-    public TransactionController(
-            TransactionService service,
-            CategoryController categoryController,
-            AccountController accountController
-    ) {
+    public TransactionController(TransactionService service, CategoryController categoryController, AccountController accountController) {
         this.service = service;
         this.categoryController = categoryController;
         this.accountController = accountController;
@@ -41,6 +37,7 @@ public class TransactionController {
         for (Transaction transaction : transactionsList) {
             System.out.println(transaction);
         }
+
     }
 
     public void postTransaction() {
@@ -53,6 +50,7 @@ public class TransactionController {
 
         String result = service.addTransaction(transaction);
         System.out.println(result);
+
     }
 
     public void updateTransaction() {
@@ -69,6 +67,7 @@ public class TransactionController {
 
         String result = service.updateTransaction(transaction);
         System.out.println(result);
+
     }
 
     public void deleteTransaction() {
@@ -79,6 +78,7 @@ public class TransactionController {
 
         String result = service.deleteTransaction(id);
         System.out.println(result);
+
     }
 
     private Transaction createTransaction(int id) {
@@ -105,18 +105,12 @@ public class TransactionController {
             return null;
         }
 
-        return TransactionFactory.create(
-                type,
-                id,
-                description,
-                amount,
-                date,
-                category,
-                accountId
-        );
+        return TransactionFactory.create(type, id, description, amount, date, category, accountId);
+
     }
 
     private int getTransactionType() {
+
         System.out.println("Select transaction type:");
         System.out.println("1. Income");
         System.out.println("2. Expense");
@@ -131,22 +125,29 @@ public class TransactionController {
         }
 
         return type;
+
     }
 
     private String getDescription() {
+
         System.out.print("Enter transaction description: ");
         return input.nextLine();
+
     }
 
     private double getAmount() {
+
         System.out.print("Enter transaction amount: ");
         double amount = input.nextDouble();
         input.nextLine();
         return amount;
+
     }
 
     private String getDate() {
+
         System.out.print("Enter transaction date: ");
         return input.nextLine();
+
     }
 }

@@ -11,14 +11,7 @@ public abstract class Transaction {
     private Category category;
     private int accountId;
 
-    public Transaction(
-            int id,
-            String description,
-            double amount,
-            String date,
-            Category category,
-            int accountId
-    ) {
+    public Transaction(int id, String description, double amount, String date, Category category, int accountId) {
         this.id = id;
         this.description = description;
         this.amount = amount;
@@ -31,7 +24,9 @@ public abstract class Transaction {
         return id;
     }
 
-    public int getAccountId() {return accountId;}
+    public int getAccountId() {
+        return accountId;
+    }
 
     public String getDescription() {
         return description;
@@ -71,10 +66,12 @@ public abstract class Transaction {
 
     @Override
     public String toString() {
+
         return "ID: " + id +
                 " | Description: " + description +
                 " | Amount: " + amount +
                 " | Date: " + date +
                 " | Category: " + category;
+
     }
 }

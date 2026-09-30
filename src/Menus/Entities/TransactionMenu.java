@@ -13,6 +13,7 @@ public class TransactionMenu {
     }
 
     public void showMenu() {
+
         System.out.println();
         System.out.println("╔════════════════════════════════════════════════╗");
         System.out.println("║              TRANSACTION MANAGEMENT            ║");
@@ -26,15 +27,19 @@ public class TransactionMenu {
         System.out.print("Enter your choice: ");
 
         resolveTransactionOptions();
+
     }
 
     public void resolveTransactionOptions() {
+
         int option = input.nextInt();
         input.nextLine();
         navigate(option);
+
     }
 
     public void navigate(int option) {
+
         switch (option) {
             case 1:
                 controller.postTransaction();
@@ -55,5 +60,6 @@ public class TransactionMenu {
             case 0:
                 break;
         }
+
     }
 }

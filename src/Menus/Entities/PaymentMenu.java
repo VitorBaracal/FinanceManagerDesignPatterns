@@ -14,6 +14,7 @@ public class PaymentMenu {
     }
 
     public void showMenu() {
+
         System.out.println();
         System.out.println("╔════════════════════════════════════════════════╗");
         System.out.println("║                    PAYMENT                     ║");
@@ -25,15 +26,19 @@ public class PaymentMenu {
         System.out.print("Enter your choice: ");
 
         resolvePaymentOptions();
+
     }
 
     public void resolvePaymentOptions() {
+
         int option = input.nextInt();
         input.nextLine();
         navigate(option);
+
     }
 
     public void navigate(int option) {
+
         switch (option) {
             case 1:
                 controller.pay(1);
@@ -46,5 +51,6 @@ public class PaymentMenu {
             case 0:
                 break;
         }
+
     }
 }

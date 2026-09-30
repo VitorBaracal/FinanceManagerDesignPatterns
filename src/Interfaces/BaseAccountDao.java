@@ -10,9 +10,9 @@ public interface BaseAccountDao {
 
     public List<Account> getAllAccounts();
 
-    public void update (int id, int newAgency);
+    public void update(int id, int newAgency);
 
-    public void update (int id, String newBankName);
+    public void update(int id, String newBankName);
 
     public void delete(int id);
 }

@@ -16,6 +16,7 @@ public class CategoryController {
     }
 
     public void getCategory() {
+
         List<Category> categories = service.getAllCategories();
 
         if (categories.isEmpty()) {
@@ -27,18 +28,22 @@ public class CategoryController {
         for (Category category : categories) {
             System.out.println("ID: " + category.getId() + " | Name: " + category.getName());
         }
+
     }
 
     public void postCategory() {
+
         System.out.println("Enter category name: ");
         String name = input.nextLine();
 
         Category category = new Category(0, name);
         String result = service.addCategory(category);
         System.out.println(result);
+
     }
 
     public void updateCategory() {
+
         System.out.print("Enter category ID: ");
         int id = input.nextInt();
         input.nextLine();
@@ -49,15 +54,18 @@ public class CategoryController {
         Category category = new Category(id, name);
         String result = service.updateCategory(category);
         System.out.println(result);
+
     }
 
     public void deleteCategory() {
+
         System.out.print("Enter category ID: ");
         int id = input.nextInt();
         input.nextLine();
 
         String result = service.deleteCategory(id);
         System.out.println(result);
+
     }
 
     public Category selectCategory() {
@@ -91,5 +99,6 @@ public class CategoryController {
 
         System.out.println("ERROR: Category not found.");
         return null;
+
     }
 }
