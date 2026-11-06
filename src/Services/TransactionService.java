@@ -4,6 +4,8 @@ import Dao.TransactionDao;
 import Entities.Transaction.Expense;
 import Entities.Transaction.Income;
 import Entities.Transaction.Transaction;
+import Observers.PrintTransactionObserver;
+import Observers.TransactionObserver;
 
 import java.util.List;
 
@@ -11,6 +13,7 @@ public class TransactionService {
 
     private final TransactionDao transactionDao;
     private final AccountService accountService;
+    private final TransactionObserver observer = new PrintTransactionObserver();
 
     public TransactionService(TransactionDao transactionDao, AccountService accountService) {
         this.transactionDao = transactionDao;
@@ -68,6 +71,7 @@ public class TransactionService {
         transaction.setDescription(description);
 
         transactionDao.update(transaction);
+        observer.onTransactionUpdated(transaction);
 
         return "SUCCESS: Transaction updated successfully.";
 
