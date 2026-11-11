@@ -26,6 +26,12 @@ public class Category {
         this.name = name;
     }
 
+    public Category copy() {
+
+        return new Category(0, name);
+
+    }
+
     @Override
     public String toString() {
 

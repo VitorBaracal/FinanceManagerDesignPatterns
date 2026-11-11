@@ -1,9 +1,13 @@
 package Services;
 
 import Dao.TransactionDao;
-import Entities.Transaction.Expense;
 import Entities.Transaction.Income;
 import Entities.Transaction.Transaction;
+import Observers.PrintTransactionObserver;
+import Observers.TransactionObserver;
+import Strategies.BalanceStrategy;
+import Strategies.DecreaseBalanceStrategy;
+import Strategies.IncreaseBalanceStrategy;
 
 import java.util.List;
 
@@ -11,6 +15,7 @@ public class TransactionService {
 
     private final TransactionDao transactionDao;
     private final AccountService accountService;
+    private final TransactionObserver observer = new PrintTransactionObserver();
 
     public TransactionService(TransactionDao transactionDao, AccountService accountService) {
         this.transactionDao = transactionDao;
@@ -36,11 +41,15 @@ public class TransactionService {
 
         transactionDao.save(transaction);
 
+        BalanceStrategy strategy;
+
         if (transaction instanceof Income) {
-            accountService.increaseBalance(transaction.getAccountId(), transaction.getAmount());
-        } else if (transaction instanceof Expense) {
-            accountService.decreaseBalance(transaction.getAccountId(), transaction.getAmount());
+            strategy = new IncreaseBalanceStrategy();
+        } else {
+            strategy = new DecreaseBalanceStrategy();
         }
+
+        strategy.apply(accountService, transaction.getAccountId(), transaction.getAmount());
 
         return "SUCCESS: Transaction '" + description + "' created successfully.";
 
@@ -68,6 +77,7 @@ public class TransactionService {
         transaction.setDescription(description);
 
         transactionDao.update(transaction);
+        observer.onTransactionUpdated(transaction);
 
         return "SUCCESS: Transaction updated successfully.";
 

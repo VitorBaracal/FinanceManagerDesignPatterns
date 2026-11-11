@@ -68,6 +68,17 @@ public class CategoryController {
 
     }
 
+    public void copyCategory() {
+
+        System.out.print("Enter category ID: ");
+        int id = input.nextInt();
+        input.nextLine();
+
+        String result = service.copyCategory(id);
+        System.out.println(result);
+
+    }
+
     public Category selectCategory() {
 
         List<Category> categories = service.getAllCategories();

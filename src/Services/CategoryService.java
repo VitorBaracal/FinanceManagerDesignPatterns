@@ -63,4 +63,16 @@ public class CategoryService {
         return "SUCCESS: Category deleted successfully.";
 
     }
+
+    public String copyCategory(int id) {
+
+        for (Category category : getAllCategories()) {
+            if (category.getId() == id) {
+                return addCategory(category.copy());
+            }
+        }
+
+        return "ERROR: Category not found.";
+
+    }
 }

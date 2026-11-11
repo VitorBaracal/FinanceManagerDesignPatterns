@@ -23,6 +23,7 @@ public class CategoryMenu {
         System.out.println("║  2. List Categories                            ║");
         System.out.println("║  3. Update Category                            ║");
         System.out.println("║  4. Delete Category                            ║");
+        System.out.println("║  5. Copy Category                              ║");
         System.out.println("║  0. Back to Main Menu                          ║");
         System.out.println("╚════════════════════════════════════════════════╝");
         System.out.print("Enter your choice: ");
@@ -56,6 +57,10 @@ public class CategoryMenu {
                 break;
             case 4:
                 controller.deleteCategory();
+                showMenu();
+                break;
+            case 5:
+                controller.copyCategory();
                 showMenu();
                 break;
             case 0:
