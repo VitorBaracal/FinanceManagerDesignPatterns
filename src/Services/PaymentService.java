@@ -1,6 +1,7 @@
 package Services;
 
 import Entities.Payment.Payment;
+import Entities.Payment.LoggingPaymentDecorator;
 import Factories.PaymentFactory;
 
 public class PaymentService {
@@ -14,7 +15,7 @@ public class PaymentService {
             return;
         }
 
-        payment.pay();
+        new LoggingPaymentDecorator(payment).pay();
 
     }
 }
