@@ -1,0 +1,98 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="AccountUML">
+    <mxGraphModel dx="826" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="account" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Account" vertex="1">
+          <mxGeometry height="294" width="340" x="230" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="account-attrs" parent="account" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- id: int&lt;div&gt;- bankName: String&lt;/div&gt;&lt;div&gt;- agency: int&lt;/div&gt;&lt;div&gt;- balance: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="account-line" parent="account" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="account-methods" parent="account" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Account(int id, String bankName, int agency, double balance)&lt;div&gt;+ getId(): int&lt;/div&gt;&lt;div&gt;+ setId(int id): void&lt;/div&gt;&lt;div&gt;+ getBankName(): String&lt;/div&gt;&lt;div&gt;+ setBankName(String bankName): void&lt;/div&gt;&lt;div&gt;+ getAgency(): int&lt;/div&gt;&lt;div&gt;+ setAgency(int agency): void&lt;/div&gt;&lt;div&gt;+ getBalance(): double&lt;/div&gt;&lt;div&gt;+ setBalance(double balance): void&lt;/div&gt;&lt;div&gt;+ toString(): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="340" y="114" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dao" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AccountDao" vertex="1">
+          <mxGeometry height="168" width="340" x="230" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="dao-attrs" parent="dao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- accounts: List&amp;lt;Account&amp;gt;&lt;div&gt;- id: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dao-line" parent="dao" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dao-methods" parent="dao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ save(Account account): void&lt;div&gt;+ getAllAccounts(): List&amp;lt;Account&amp;gt;&lt;/div&gt;&lt;div&gt;+ update(int id, int newAgency): void&lt;/div&gt;&lt;div&gt;+ update(int id, String newBankName): void&lt;/div&gt;&lt;div&gt;+ delete(int id): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="340" y="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="interface" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=45;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;lt;&amp;lt; interface &amp;gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;BaseAccountDao&lt;/div&gt;" vertex="1">
+          <mxGeometry height="138" width="340" x="230" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="interface-methods" parent="interface" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ save(Account account): void&lt;div&gt;+ getAllAccounts(): List&amp;lt;Account&amp;gt;&lt;/div&gt;&lt;div&gt;+ update(int id, int newAgency): void&lt;/div&gt;&lt;div&gt;+ update(int id, String newBankName): void&lt;/div&gt;&lt;div&gt;+ delete(int id): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="93" width="340" y="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="service" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AccountService" vertex="1">
+          <mxGeometry height="184" width="340" x="230" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="service-attrs" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- accountDao: BaseAccountDao" vertex="1">
+          <mxGeometry height="24" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="service-line" parent="service" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="service-methods" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ AccountService(BaseAccountDao accountDao)&lt;div&gt;+ getAllAccounts(): List&amp;lt;Account&amp;gt;&lt;/div&gt;&lt;div&gt;+ addAccount(Account account): String&lt;/div&gt;&lt;div&gt;+ updateAccount(Account account): String&lt;/div&gt;&lt;div&gt;+ deleteAccount(int id): String&lt;/div&gt;&lt;div&gt;+ increaseBalance(int accountId, double amount): void&lt;/div&gt;&lt;div&gt;+ decreaseBalance(int accountId, double amount): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="126" width="340" y="58" as="geometry" />
+        </mxCell>
+
+        <mxCell id="controller" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AccountController" vertex="1">
+          <mxGeometry height="186" width="340" x="230" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="controller-attrs" parent="controller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- service: AccountService&lt;div&gt;- input: Scanner&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="controller-line" parent="controller" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="controller-methods" parent="controller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ AccountController(AccountService service)&lt;div&gt;+ getAccount(): void&lt;/div&gt;&lt;div&gt;+ postAccount(): void&lt;/div&gt;&lt;div&gt;+ updateAccount(): void&lt;/div&gt;&lt;div&gt;+ deleteAccount(): void&lt;/div&gt;&lt;div&gt;- getBalance(): double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="340" y="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="menu" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AccountMenu" vertex="1">
+          <mxGeometry height="150" width="340" x="230" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-attrs" parent="menu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- controller: AccountController&lt;div&gt;- input: Scanner&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-line" parent="menu" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-methods" parent="menu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ AccountMenu(AccountController controller)&lt;div&gt;+ showMenu(): void&lt;/div&gt;&lt;div&gt;+ resolveAccountOptions(): void&lt;/div&gt;&lt;div&gt;+ navigate(int option): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="340" y="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-dao-account" edge="1" parent="1" source="dao" target="account" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-dao-interface" edge="1" parent="1" source="dao" target="interface" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-service-interface" edge="1" parent="1" source="service" target="interface" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-controller-service" edge="1" parent="1" source="controller" target="service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-menu-controller" edge="1" parent="1" source="menu" target="controller" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,98 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="CategoryUML">
+    <mxGraphModel dx="826" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="category" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Category" vertex="1">
+          <mxGeometry height="186" width="260" x="270" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="category-attrs" parent="category" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- id: int&lt;div&gt;- name: String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="category-line" parent="category" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="category-methods" parent="category" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Category(int id, String name)&lt;div&gt;+ getId(): int&lt;/div&gt;&lt;div&gt;+ setId(int id): void&lt;/div&gt;&lt;div&gt;+ getName(): String&lt;/div&gt;&lt;div&gt;+ setName(String name): void&lt;/div&gt;&lt;div&gt;+ toString(): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="260" y="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dao" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CategoryDao" vertex="1">
+          <mxGeometry height="150" width="280" x="260" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="dao-attrs" parent="dao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- categories: List&amp;lt;Category&amp;gt;&lt;div&gt;- id: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dao-line" parent="dao" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dao-methods" parent="dao" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ save(Category category): void&lt;div&gt;+ getAllCategories(): List&amp;lt;Category&amp;gt;&lt;/div&gt;&lt;div&gt;+ update(int id, String newName): void&lt;/div&gt;&lt;div&gt;+ delete(int id): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="280" y="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="interface" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=45;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;lt;&amp;lt; interface &amp;gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;BaseCategoryDao&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="300" x="250" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="interface-methods" parent="interface" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ save(Category category): void&lt;div&gt;+ getAllCategories(): List&amp;lt;Category&amp;gt;&lt;/div&gt;&lt;div&gt;+ update(int id, String newName): void&lt;/div&gt;&lt;div&gt;+ delete(int id): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="300" y="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="service" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CategoryService" vertex="1">
+          <mxGeometry height="148" width="320" x="240" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="service-attrs" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- categoryDao: BaseCategoryDao" vertex="1">
+          <mxGeometry height="24" width="320" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="service-line" parent="service" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="service-methods" parent="service" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ CategoryService(BaseCategoryDao categoryDao)&lt;div&gt;+ getAllCategories(): List&amp;lt;Category&amp;gt;&lt;/div&gt;&lt;div&gt;+ addCategory(Category category): String&lt;/div&gt;&lt;div&gt;+ updateCategory(Category category): String&lt;/div&gt;&lt;div&gt;+ deleteCategory(int id): String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="320" y="58" as="geometry" />
+        </mxCell>
+
+        <mxCell id="controller" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CategoryController" vertex="1">
+          <mxGeometry height="186" width="320" x="240" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="controller-attrs" parent="controller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- service: CategoryService&lt;div&gt;- input: Scanner&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="320" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="controller-line" parent="controller" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="controller-methods" parent="controller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ CategoryController(CategoryService service)&lt;div&gt;+ getCategory(): void&lt;/div&gt;&lt;div&gt;+ postCategory(): void&lt;/div&gt;&lt;div&gt;+ updateCategory(): void&lt;/div&gt;&lt;div&gt;+ deleteCategory(): void&lt;/div&gt;&lt;div&gt;+ selectCategory(): Category&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="320" y="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="menu" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CategoryMenu" vertex="1">
+          <mxGeometry height="150" width="320" x="240" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-attrs" parent="menu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- controller: CategoryController&lt;div&gt;- input: Scanner&lt;/div&gt;" vertex="1">
+          <mxGeometry height="44" width="320" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-line" parent="menu" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-methods" parent="menu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ CategoryMenu(CategoryController controller)&lt;div&gt;+ showMenu(): void&lt;/div&gt;&lt;div&gt;+ resolveCategoryOptions(): void&lt;/div&gt;&lt;div&gt;+ navigate(int option): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="72" width="320" y="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge-dao-category" edge="1" parent="1" source="dao" target="category" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-dao-interface" edge="1" parent="1" source="dao" target="interface" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-service-interface" edge="1" parent="1" source="service" target="interface" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-controller-service" edge="1" parent="1" source="controller" target="service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-menu-controller" edge="1" parent="1" source="menu" target="controller" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
